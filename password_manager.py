@@ -163,9 +163,9 @@ def main():
 	lock_accounts(key)
 	
 	while True:
+		print()
 		options()
 		option = input(Fore.CYAN + 'Enter an option: ')
-		print()
 		
 		if option == '1':
 			service = input('Service: ').lower()
@@ -185,13 +185,16 @@ def main():
 			
 		elif option == '4':
 			new_password = getpass.getpass(Fore.YELLOW + 'New Password: ')
-			while not len(new_password) == 16:
+			while len(new_password) != 16:
 				new_password = getpass.getpass(Fore.YELLOW + 'New Password: ')
-			change_password(password,new_password)
+			change_password(key,new_password)
 			key = new_password
 			
 		elif option == '5':
 			sys.exit()
+		      
+		else:
+		      	print('Invalid option.')
 
 main()
 
