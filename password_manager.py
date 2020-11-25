@@ -166,6 +166,7 @@ def main():
 		print()
 		options()
 		option = input(Fore.CYAN + 'Enter an option: ')
+		print()
 		
 		if option == '1':
 			service = input('Service: ').lower()
