@@ -182,7 +182,7 @@ def main():
 			
 		elif option == '3':
 			service = input('Service: ').lower()
-		      	print()
+			print()
 			search_account(accounts,service)
 			
 		elif option == '4':
